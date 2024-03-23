@@ -1,0 +1,414 @@
+/*-----------------------------------*\
+ * style.css
+\*-----------------------------------*/
+/* <===================> */
+/*   😘😘😘😘😘😘😘   */
+/*   Author : huda gans  */
+/*   ~~~~~~~~~~~~~~~~~~  */
+/* <===================> */
+/*       Base CSS        */
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-family: Raleway, sans-serif;
+  }
+  
+  hr {
+    padding: 0 10%;
+    border-top: 1px dashed rgb(147, 145, 145);
+  }
+/* <===================> */
+/*         navbar        */
+/*   ~~~~~~~~~~~~~~~~~~  */
+/* <===================> */
+  
+  .navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: 800;
+    position: static;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  background-color: rgba(51, 51, 51, 0.5);
+  }
+  
+  .navbar-scrolled {
+    background-color: #00000032; 
+    box-shadow: 0px 3px 30px 3px rgba(153, 255, 148, 0.389); 
+  }
+  @keyframes changeColor {
+    0% { color: rgb(161, 161, 161); } 
+    33% { color: rgb(255, 255, 255); } 
+    66% { color: rgb(255, 255, 255); } 
+    100% { color: rgb(207, 198, 198); } 
+  }
+  @keyframes changeColor {
+    0% {
+      color: rgb(0, 70, 5);
+      text-shadow: 0px 0px 5px rgba(161, 161, 161, 0.5);
+    }
+    33% {
+      color: rgb(255, 255, 255);
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    }
+    66% {
+      color: rgb(0, 70, 5);
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+      color: rgb(0, 70, 5);
+      text-shadow: 0px 0px 5px rgba(207, 198, 198, 0.5);
+    }
+  }
+  
+.navbar-brand {
+  animation: changeColor 6s infinite;
+  margin-left: 30px;
+}
+
+  
+  /* Tampilan mobile */
+  @media only screen and (max-width: 600px) {
+  
+    .navbar {
+      padding: 10px 0 5px;
+    }
+  
+    .navbar .card a {
+      font-size: 18px;
+    }
+  
+    .navbar .card h4 {
+      font-size: 10px;
+    }
+  }
+/* <===================> */
+/*         banner        */
+/*   ~~~~~~~~~~~~~~~~~~  */
+/* <===================> */
+/* Banner atau Background */
+
+  .banner {
+    position: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.controls {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    background-color: #333333;
+}
+
+.prev-button, .next-button {
+    cursor: pointer;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #000;
+    padding: 5px 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+  @media only screen and (max-width: 600px) {
+    .banner img {
+      padding: 20px 5% 20px;
+    }
+  }
+  
+/* <===================> */
+/*        paragraf       */
+/*   ~~~~~~~~~~~~~~~~~~  */
+/* <===================> */
+
+  .paragraf {
+    margin:50px 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  .paragraf button {
+    margin-left: 700px;
+    border: 2px  solid rgb(93, 59, 59);
+    padding: 10px;
+    border-radius:20px;
+    background-color: thistle;
+  }
+  @media only screen and (max-width: 600px) {
+    .paragraf button {
+      margin-left: 120px;
+      margin-bottom: 30px;
+    }
+  }
+  .paragraf p{
+    padding-bottom: 10px;
+  }
+
+  [data-bs-theme="dark"] .paragraf p {
+    color: #ffffff; /* Putih untuk teks pada tema gelap */
+  }
+  .paragraf  h1{
+    text-align: center;
+  }
+
+  
+  .text-start{
+    color:var(--primary-color)
+  }
+  
+  .clock {
+    display: flex;
+    color: #009e00;
+    flex-direction: column;
+    border: #92fff6 solid 3px;
+    width: fit-content;
+    padding: 10px 19px;
+    border-style:dotted;
+  }
+  
+  .date {
+    color: #009e00;
+    flex-direction: column;
+    border: #92fff6 solid 3px;
+    width: fit-content;
+    padding: 10px 10px;
+    border-style:dotted;
+  }
+  
+  
+  @keyframes breatheShadow {
+    0% {
+      box-shadow: 0px 1px 30px 3px rgba(153, 255, 148, 0.389);
+    }
+    50% {
+      box-shadow: 0px 1px 60px 5px rgba(153, 255, 148, 0.6);
+    }
+    100% {
+      box-shadow: 0px 1px 30px 3px rgba(153, 255, 148, 0.389);
+    }
+  }
+  
+  .jam {
+    margin-bottom: 0;
+    align-items: end;
+    border: violet solid 3px;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 10px 10px;
+    animation: breatheShadow 1s infinite;
+  }
+  
+
+
+/* <===================> */
+/*       container       */
+/*   ~~~~~~~~~~~~~~~~~~  */
+/* <===================> */
+  .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    margin-bottom: 80px;
+  }
+
+  /* course */
+  
+  .container .course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: 2px  solid #716770;
+    border-radius: 100px;
+    box-shadow: 0px 3px 30px 3px rgba(153, 255, 148, 0.389);
+  }
+  
+  .container .course .card-course {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .container .course .card-course .itemcourse {
+    text-align: center;
+    margin: 0 30px;
+  }
+  
+  .container .course .card-course .itemcourse h3 {
+    font-size: 35px;
+  }
+  
+  .container .course .card-course .itemcourse h6 {
+    font-size: 20px;
+    color: #666666;
+  }
+  
+  .card-course .itemcourse img {
+    width: 400px;
+  }
+  
+  /* Responsive Anggota */
+  
+  @media only screen and (max-width: 600px) {
+    .container .course h1 {
+      font-size: 30px;
+    }
+  
+    .card-course .itemcourse img {
+      width: 300px;
+    }
+  
+    .container .course .card-course {
+      gap: 30px;
+      margin: 0 10px;
+    }
+  
+    .container .course .card-course .itemcourse h3 {
+      font-size: 27px;
+    }
+  
+    .container .course .card-course .itemcourse h6 {
+      font-size: 18px;
+    }
+  }
+  
+  /*-----------------------------------*\
+   * #footer
+  /* \*-----------------------------------* */
+  
+  
+  footer {
+    margin-top: auto;
+    /* Menempatkan footer di paling bawah */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    background: linear-gradient(to bottom, #333333, #ffffff);
+    padding: 20px 0 25px;
+  }
+  
+  .item {
+    margin-right: 10px;
+  }
+  
+  p {
+    text-align: left;
+    color: #555555;
+    margin: 0;
+    font-size: 22px;
+  }
+  
+  .social-media {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-media a {
+    padding:10px;
+    border-radius: 100px;
+    background-color: violet;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px  solid #121111;
+  }
+  
+  .a a{
+    padding:10px;
+    border-radius: 100px;
+    background-color: rgb(252, 98, 78);
+    border: 2px  solid #121111;
+  }
+  .b a {
+    padding:10px;
+    border-radius: 100px;
+    background-color: rgb(243, 252, 78);
+    border: 2px  solid #121111;
+  } 
+
+  .social-media img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Media Query untuk layar dengan lebar kurang dari atau sama dengan 600px */
+  @media (max-width: 600px) {
+    footer {
+      flex-direction: column;
+      flex-direction: column-reverse;
+      padding: 10px 0 30px;
+    }
+  
+    p {
+      font-size: 12px;
+    }
+  
+    .social-media img {
+      width: 25px;
+      height: 25px;
+      margin-bottom: 15px;
+    }
+  
+    .social-media {
+      margin-top: 15px;
+    }
+  }
+
+
+
+
+  /* Animasi tombol toggle */
+#theme-toggle-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff; /* Sesuaikan dengan warna ikon */
+  transition: transform 0.3s ease;
+  margin-right: 50px;
+}
+
+#theme-toggle-btn.clicked {
+  transform: rotate(180deg); /* Rotasi tombol saat diklik */
+}
+
+@media (max-width: 660px) {
+  #theme-toggle-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;  
+  }}
